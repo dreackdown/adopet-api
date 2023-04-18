@@ -2,53 +2,35 @@ package com.example.adopet.api.entities;
 
 import com.example.adopet.api.dto.Abrigo.DadosAtualizacaoAbrigo;
 import com.example.adopet.api.dto.Abrigo.DadosCadastroAbrigo;
-import com.example.adopet.api.dto.Abrigo.DadosDetalhamentoAbrigo;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.io.Serializable;
-import java.time.Instant;
-
-@Table(name = "tbl_abrigo")
-@Entity(name = "Abrigo")
+@Getter
+@EqualsAndHashCode(of = "id")
+@ToString(of = {"id", "nome", "email", "telefone"})
 @NoArgsConstructor
-@AllArgsConstructor
-@Data
-public class Abrigo implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+@Entity
+@Table(name = "tbl_abrigos")
+public class Abrigo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
-
-    @Column(name = "created_at")
-    private Instant createdAt;
-
-    @Column(name = "updated_at")
-    private Instant updatedAt;
-
-    @Embedded
-    private Endereco endereco;
+    private String telefone;
+    private String email;
 
     public Abrigo(DadosCadastroAbrigo dados) {
         this.nome = dados.nome();
-        this.endereco = new Endereco(dados.endereco());
-        this.createdAt = Instant.now();
+        this.email = dados.email();
+        this.telefone = dados.telefone();
     }
 
     public void update(DadosAtualizacaoAbrigo dados) {
-        if (dados.nome() != null) {
-            this.nome = dados.nome();
-        }
-
-        if (dados.endereco() != null) {
-            this.endereco.update(dados.endereco());
-        }
+        this.nome = dados.nome() != null ? dados.nome() : this.nome;
+        this.email = dados.email() != null ? dados.email() : this.email;
+        this.telefone = dados.telefone() != null ? dados.telefone() : this.telefone;
     }
+
 }
 

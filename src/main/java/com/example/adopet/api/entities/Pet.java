@@ -1,39 +1,52 @@
 package com.example.adopet.api.entities;
 
+import com.example.adopet.api.dto.Pet.DadosAtualizacaoPet;
+import com.example.adopet.api.dto.Pet.DadosCadastroPet;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
 import java.time.Instant;
 
-@Table(name = "tbl_pet")
-@Entity(name = "Pet")
+@Getter
+@EqualsAndHashCode(of = "id")
+@ToString(of = {"id", "nome", "descricao"})
 @NoArgsConstructor
-@AllArgsConstructor
-@Data
-public class Pet implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+@Entity
+@Table(name = "tbl_pets")
+public class Pet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String nome;
+    private String descricao;
 
-    String nome;
-    Integer idade;
-    String porte;
-    String temperamento;
-    private Boolean adotado = false;
-    @Column(name = "image_url")
-    private String imageUrl;
+    private Boolean adotado;
 
-    @Column(name = "created_at")
-    private Instant createdAt;
+    private String imagem;
 
-    @Column(name = "updated_at")
-    private Instant updatedAt;
+    private String idade;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "tbl_abrigo", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "abrigo_id")
     private Abrigo abrigo;
+
+    public Pet(DadosCadastroPet dados, Abrigo abrigo) {
+        this.nome = dados.nome();
+        this.descricao = dados.descricao();
+        this.adotado = dados.adotado();
+        this.imagem = dados.imagem();
+        this.idade = dados.idade();
+        this.abrigo = abrigo;
+    }
+
+    public void update(DadosAtualizacaoPet dados, Abrigo abrigo) {
+        this.nome = dados.nome() != null ? dados.nome() : this.nome;
+        this.descricao = dados.descricao() != null ? dados.descricao() : this.descricao;
+        this.adotado = dados.adotado() != null ? dados.adotado() : this.adotado;
+        this.imagem = dados.imagem() != null ? dados.imagem() : this.imagem;
+        this.idade = dados.idade() != null ? dados.idade() : this.idade;
+        this.abrigo = abrigo != null ? abrigo : this.abrigo;
+    }
 }
