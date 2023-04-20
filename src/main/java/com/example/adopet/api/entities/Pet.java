@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Getter
-@EqualsAndHashCode(of = "id")
+@Setter
 @ToString(of = {"id", "nome", "descricao"})
 @NoArgsConstructor
 @Entity
@@ -17,19 +17,27 @@ import java.time.Instant;
 public class Pet {
 
     @Id
+    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Setter(AccessLevel.NONE)
     private String nome;
+
+    @Setter(AccessLevel.NONE)
     private String descricao;
 
     private Boolean adotado;
 
+    @Setter(AccessLevel.NONE)
     private String imagem;
 
+    @Setter(AccessLevel.NONE)
     private String idade;
 
     @ManyToOne
     @JoinColumn(name = "abrigo_id")
+    @Setter(AccessLevel.NONE)
     private Abrigo abrigo;
 
     public Pet(DadosCadastroPet dados, Abrigo abrigo) {

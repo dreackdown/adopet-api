@@ -6,8 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
-@EqualsAndHashCode(of = "id")
-@ToString(of = {"id", "nome", "email", "telefone"})
+@ToString(of = {"id", "nome", "telefone", "email"})
 @NoArgsConstructor
 @Entity
 @Table(name = "tbl_abrigos")

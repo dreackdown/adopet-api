@@ -1,0 +1,480 @@
+2023-04-18 00:04:48,666 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:04:48,672 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 00:04:48,679 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 00:04:56,506 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 00:04:56,564 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 14828 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 00:04:56,566 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 00:04:56,568 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 00:04:56,634 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 00:04:56,634 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 00:04:57,757 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 00:04:57,852 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2023-04-18 00:04:58,688 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 00:04:58,702 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 00:04:58,703 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 00:04:58,704 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 00:04:58,800 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 00:04:58,801 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2166 ms
+2023-04-18 00:04:59,031 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 00:04:59,031 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 00:04:59,031 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 00:04:59,046 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 00:04:59,511 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b656bdc
+2023-04-18 00:04:59,515 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 00:04:59,567 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 00:04:59,632 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.035s)
+2023-04-18 00:04:59,650 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 00:04:59,651 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 00:04:59,801 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 00:04:59,900 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 00:05:00,408 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 00:05:01,584 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 00:05:01,606 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:05:02,202 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 00:05:03,231 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 00:05:03,261 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 00:05:03,297 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 00:05:03,310 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.313 seconds (process running for 8.503)
+2023-04-18 00:05:18,147 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 00:05:18,148 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 00:05:18,150 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 2 ms
+2023-04-18 00:05:24,869 WARN [http-nio-8080-exec-3] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Pet with id 3]
+2023-04-18 00:06:48,571 WARN [http-nio-8080-exec-7] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Tutor with id 4]
+2023-04-18 00:06:58,374 WARN [http-nio-8080-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Abrigo with id 4]
+2023-04-18 00:07:04,336 WARN [http-nio-8080-exec-9] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Abrigo with id 2]
+2023-04-18 00:07:15,982 WARN [http-nio-8080-exec-2] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Pet with id 3]
+2023-04-18 00:08:53,358 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:08:53,363 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 00:08:53,371 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 00:08:59,988 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 00:09:00,044 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 16600 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 00:09:00,045 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 00:09:00,045 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 00:09:00,109 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 00:09:00,110 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 00:09:01,190 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 00:09:01,285 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2023-04-18 00:09:02,066 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 00:09:02,080 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 00:09:02,082 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 00:09:02,083 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 00:09:02,197 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 00:09:02,197 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2086 ms
+2023-04-18 00:09:02,410 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 00:09:02,410 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 00:09:02,410 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 00:09:02,424 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 00:09:02,872 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79ff42f4
+2023-04-18 00:09:02,875 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 00:09:02,924 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 00:09:02,984 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.033s)
+2023-04-18 00:09:03,003 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 00:09:03,004 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 00:09:03,139 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 00:09:03,253 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 00:09:03,740 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 00:09:04,948 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 00:09:04,967 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:09:05,671 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 00:09:06,733 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 00:09:06,764 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 00:09:06,800 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 00:09:06,813 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.307 seconds (process running for 8.505)
+2023-04-18 00:09:08,752 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 00:09:08,753 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 00:09:08,754 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 00:09:08,927 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Pet with id 3]
+2023-04-18 00:09:18,498 WARN [http-nio-8080-exec-4] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Abrigo with id 2]
+2023-04-18 00:09:53,391 WARN [http-nio-8080-exec-7] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Tutor with id 4]
+2023-04-18 00:19:21,142 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:19:21,147 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 00:19:21,153 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 00:19:29,679 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 00:19:29,734 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 11076 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 00:19:29,735 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 00:19:29,736 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 00:19:29,802 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 00:19:29,802 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 00:19:30,971 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 00:19:31,066 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2023-04-18 00:19:31,870 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 00:19:31,883 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 00:19:31,884 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 00:19:31,884 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 00:19:31,979 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 00:19:31,980 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2177 ms
+2023-04-18 00:19:32,199 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 00:19:32,199 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 00:19:32,199 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 00:19:32,213 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 00:19:32,660 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5651ac1
+2023-04-18 00:19:32,663 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 00:19:32,715 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 00:19:32,777 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.034s)
+2023-04-18 00:19:32,796 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 00:19:32,797 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 00:19:32,944 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 00:19:33,050 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 00:19:33,556 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 00:19:34,774 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 00:19:34,791 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:19:35,399 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 00:19:36,421 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 00:19:36,450 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 00:19:36,484 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 00:19:36,497 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.343 seconds (process running for 8.585)
+2023-04-18 00:20:22,353 INFO [http-nio-8080-exec-2] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 00:20:22,354 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 00:20:22,356 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 2 ms
+2023-04-18 00:20:22,537 WARN [http-nio-8080-exec-2] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Pet with id 3]
+2023-04-18 00:20:54,309 WARN [http-nio-8080-exec-4] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Abrigo with id 3]
+2023-04-18 00:22:02,257 WARN [http-nio-8080-exec-9] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Tutor with id 4]
+2023-04-18 00:22:07,562 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Abrigo with id 3]
+2023-04-18 00:22:54,053 WARN [http-nio-8080-exec-4] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id 1]
+2023-04-18 00:23:13,259 WARN [http-nio-8080-exec-6] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id 1]
+2023-04-18 00:23:27,782 WARN [http-nio-8080-exec-9] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id 2]
+2023-04-18 00:23:40,613 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceEmptyException: Nenhum registro encontrado.]
+2023-04-18 00:24:29,744 WARN [http-nio-8080-exec-3] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id 1]
+2023-04-18 00:24:40,249 WARN [http-nio-8080-exec-5] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id 1]
+2023-04-18 00:30:34,214 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 00:30:34,219 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 00:30:34,226 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 19:40:36,924 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 19:40:37,061 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 12116 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 19:40:37,062 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 19:40:37,063 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 19:40:37,219 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 19:40:37,219 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 19:40:39,189 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 19:40:39,365 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 163 ms. Found 3 JPA repository interfaces.
+2023-04-18 19:40:40,764 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 19:40:40,780 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:40:40,781 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 19:40:40,782 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 19:40:40,999 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 19:40:40,999 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 3778 ms
+2023-04-18 19:40:41,421 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 19:40:41,422 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 19:40:41,422 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 19:40:41,452 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 19:40:42,076 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d182920
+2023-04-18 19:40:42,078 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 19:40:42,154 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 19:40:42,288 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.058s)
+2023-04-18 19:40:42,321 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 19:40:42,325 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 19:40:42,596 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 19:40:42,793 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 19:40:43,708 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 19:40:45,635 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 19:40:45,656 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:40:46,573 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 19:40:48,224 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 19:40:48,248 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:40:48,284 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 19:40:48,297 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 12.088 seconds (process running for 14.049)
+2023-04-18 19:46:07,269 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 19:46:07,270 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 19:46:07,271 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 19:46:20,769 WARN [http-nio-8080-exec-4] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.example.adopet.api.controller.TutoresController.save(com.example.adopet.api.dto.Tutor.DadosCadastroTutor,org.springframework.web.util.UriComponentsBuilder): [Field error in object 'dadosCadastroTutor' on field 'nome': rejected value []; codes [NotBlank.dadosCadastroTutor.nome,NotBlank.nome,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dadosCadastroTutor.nome,nome]; arguments []; default message [nome]]; default message [não deve estar em branco]] ]
+2023-04-18 19:46:28,440 WARN [http-nio-8080-exec-6] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.example.adopet.api.controller.TutoresController.save(com.example.adopet.api.dto.Tutor.DadosCadastroTutor,org.springframework.web.util.UriComponentsBuilder): [Field error in object 'dadosCadastroTutor' on field 'email': rejected value []; codes [NotBlank.dadosCadastroTutor.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dadosCadastroTutor.email,email]; arguments []; default message [email]]; default message [não deve estar em branco]] ]
+2023-04-18 19:46:34,232 WARN [http-nio-8080-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.example.adopet.api.controller.TutoresController.save(com.example.adopet.api.dto.Tutor.DadosCadastroTutor,org.springframework.web.util.UriComponentsBuilder): [Field error in object 'dadosCadastroTutor' on field 'senha': rejected value []; codes [NotBlank.dadosCadastroTutor.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dadosCadastroTutor.senha,senha]; arguments []; default message [senha]]; default message [não deve estar em branco]] ]
+2023-04-18 19:46:42,337 WARN [http-nio-8080-exec-9] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity com.example.adopet.api.controller.TutoresController.save(com.example.adopet.api.dto.Tutor.DadosCadastroTutor,org.springframework.web.util.UriComponentsBuilder) with 2 errors: [Field error in object 'dadosCadastroTutor' on field 'senha': rejected value []; codes [NotBlank.dadosCadastroTutor.senha,NotBlank.senha,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dadosCadastroTutor.senha,senha]; arguments []; default message [senha]]; default message [não deve estar em branco]] [Field error in object 'dadosCadastroTutor' on field 'email': rejected value []; codes [NotBlank.dadosCadastroTutor.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [dadosCadastroTutor.email,email]; arguments []; default message [email]]; default message [não deve estar em branco]] ]
+2023-04-18 19:46:46,285 INFO [http-nio-8080-exec-1] com.example.adopet.api.services.TutorService: Criando um novo tutor Juliet Patton
+2023-04-18 19:49:08,609 WARN [http-nio-8080-exec-7] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Tutor with id 5]
+2023-04-18 19:52:01,011 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:52:01,015 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 19:52:01,023 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 19:52:10,840 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 19:52:10,895 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 5840 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 19:52:10,896 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 19:52:10,897 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 19:52:10,960 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 19:52:10,961 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 19:52:12,075 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 19:52:12,170 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2023-04-18 19:52:13,038 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 19:52:13,056 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:52:13,058 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 19:52:13,058 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 19:52:13,163 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 19:52:13,164 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2202 ms
+2023-04-18 19:52:13,398 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 19:52:13,398 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 19:52:13,399 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 19:52:13,413 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 19:52:13,878 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b01d52b
+2023-04-18 19:52:13,881 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 19:52:13,936 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 19:52:14,001 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.036s)
+2023-04-18 19:52:14,023 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 19:52:14,024 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 19:52:14,183 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 19:52:14,295 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 19:52:14,866 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 19:52:16,063 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 19:52:16,081 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:52:16,697 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 19:52:17,680 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 19:52:17,711 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:52:17,742 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 19:52:17,754 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.405 seconds (process running for 8.763)
+2023-04-18 19:52:18,582 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 19:52:18,583 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 19:52:18,584 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 19:52:18,761 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Tutor with id 5]
+2023-04-18 19:53:22,722 WARN [http-nio-8080-exec-5] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id 20]
+2023-04-18 19:54:09,533 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:54:09,537 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 19:54:09,545 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 19:54:16,244 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 19:54:16,301 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 9296 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 19:54:16,302 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 19:54:16,303 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 19:54:16,369 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 19:54:16,369 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 19:54:17,493 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 19:54:17,601 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 93 ms. Found 3 JPA repository interfaces.
+2023-04-18 19:54:18,470 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 19:54:18,484 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:54:18,485 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 19:54:18,486 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 19:54:18,590 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 19:54:18,591 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2221 ms
+2023-04-18 19:54:18,820 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 19:54:18,820 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 19:54:18,820 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 19:54:18,835 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 19:54:19,314 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6da70bd2
+2023-04-18 19:54:19,317 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 19:54:19,369 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 19:54:19,433 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.036s)
+2023-04-18 19:54:19,451 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 19:54:19,453 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 19:54:19,602 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 19:54:19,700 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 19:54:20,183 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 19:54:21,367 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 19:54:21,384 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:54:22,042 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 19:54:23,175 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 19:54:23,205 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:54:23,240 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 19:54:23,253 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.499 seconds (process running for 8.668)
+2023-04-18 19:54:25,292 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 19:54:25,292 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 19:54:25,294 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 2 ms
+2023-04-18 19:54:25,653 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id Nenhum registro encontrado com o Id: 20]
+2023-04-18 19:55:42,539 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:55:42,543 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 19:55:42,550 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 19:55:49,249 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 19:55:49,306 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 15248 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 19:55:49,306 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 19:55:49,308 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 19:55:49,372 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 19:55:49,373 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 19:55:50,498 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 19:55:50,595 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+2023-04-18 19:55:51,484 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 19:55:51,498 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:55:51,500 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 19:55:51,500 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 19:55:51,597 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 19:55:51,598 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2224 ms
+2023-04-18 19:55:51,841 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 19:55:51,842 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 19:55:51,842 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 19:55:51,856 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 19:55:52,346 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@411e849a
+2023-04-18 19:55:52,349 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 19:55:52,404 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 19:55:52,476 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.040s)
+2023-04-18 19:55:52,498 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 19:55:52,499 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 19:55:52,659 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 19:55:52,756 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 19:55:53,265 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 19:55:54,425 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 19:55:54,442 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:55:55,048 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 19:55:56,067 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 19:55:56,096 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:55:56,128 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 19:55:56,141 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.375 seconds (process running for 8.535)
+2023-04-18 19:55:58,771 INFO [http-nio-8080-exec-2] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 19:55:58,771 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 19:55:58,773 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 19:55:59,126 WARN [http-nio-8080-exec-2] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Não encontrado. Id Nenhum registro encontrado com o Id: 20]
+2023-04-18 19:57:48,371 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:57:48,376 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 19:57:48,384 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 19:57:55,162 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 19:57:55,221 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 12560 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 19:57:55,222 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 19:57:55,223 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 19:57:55,289 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 19:57:55,290 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 19:57:56,410 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 19:57:56,508 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 84 ms. Found 3 JPA repository interfaces.
+2023-04-18 19:57:57,350 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 19:57:57,364 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:57:57,365 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 19:57:57,366 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 19:57:57,459 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 19:57:57,460 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2169 ms
+2023-04-18 19:57:57,670 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 19:57:57,670 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 19:57:57,670 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 19:57:57,684 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 19:57:58,126 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bb6c401
+2023-04-18 19:57:58,129 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 19:57:58,179 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 19:57:58,239 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.033s)
+2023-04-18 19:57:58,257 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 19:57:58,259 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 19:57:58,401 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 19:57:58,502 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 19:57:59,001 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 19:58:00,204 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 19:58:00,221 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 19:58:00,843 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 19:58:01,877 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 19:58:01,904 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 19:58:01,936 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 19:58:01,949 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.282 seconds (process running for 8.446)
+2023-04-18 19:58:02,723 INFO [http-nio-8080-exec-2] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 19:58:02,724 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 19:58:02,725 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 19:58:03,064 WARN [http-nio-8080-exec-2] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Nenhum registro encontrado com o Id: 20]
+2023-04-18 19:58:42,872 WARN [http-nio-8080-exec-4] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Nenhum registro encontrado com o Id: 20]
+2023-04-18 19:59:03,138 WARN [http-nio-8080-exec-7] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceNotFoundException: Nenhum registro encontrado com o Id: 4]
+2023-04-18 20:00:19,713 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:00:19,717 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 20:00:19,725 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 20:00:26,439 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 20:00:26,500 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 12564 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 20:00:26,501 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 20:00:26,502 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 20:00:26,569 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 20:00:26,569 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 20:00:27,830 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 20:00:27,921 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2023-04-18 20:00:28,773 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 20:00:28,787 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 20:00:28,788 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 20:00:28,789 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 20:00:28,886 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 20:00:28,887 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2316 ms
+2023-04-18 20:00:29,124 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 20:00:29,125 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 20:00:29,125 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 20:00:29,141 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 20:00:29,617 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b656bdc
+2023-04-18 20:00:29,620 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 20:00:29,673 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 20:00:29,743 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.040s)
+2023-04-18 20:00:29,764 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 20:00:29,766 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 20:00:29,921 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 20:00:30,023 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 20:00:30,542 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 20:00:31,688 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 20:00:31,711 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:00:32,316 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 20:00:33,384 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 20:00:33,415 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 20:00:33,448 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 20:00:33,461 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.486 seconds (process running for 8.723)
+2023-04-18 20:00:34,470 INFO [http-nio-8080-exec-2] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 20:00:34,471 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 20:00:34,472 INFO [http-nio-8080-exec-2] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 20:11:37,266 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:11:37,270 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 20:11:37,278 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 20:38:10,636 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 20:38:10,691 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 8068 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 20:38:10,692 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 20:38:10,693 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 20:38:10,757 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 20:38:10,757 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 20:38:11,866 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 20:38:11,958 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2023-04-18 20:38:12,783 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 20:38:12,796 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 20:38:12,797 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 20:38:12,798 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 20:38:12,895 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 20:38:12,897 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2139 ms
+2023-04-18 20:38:13,129 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 20:38:13,129 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 20:38:13,129 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 20:38:13,143 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 20:38:13,605 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ff7cab
+2023-04-18 20:38:13,608 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 20:38:13,662 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 20:38:13,739 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.041s)
+2023-04-18 20:38:13,761 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 20:38:13,763 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 20:38:13,921 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 20:38:14,014 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 20:38:14,502 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 20:38:15,686 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 20:38:15,702 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:38:16,322 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 20:38:17,293 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 20:38:17,317 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 20:38:17,346 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 20:38:17,358 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.232 seconds (process running for 8.412)
+2023-04-18 20:38:27,771 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 20:38:27,771 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 20:38:27,772 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 20:38:28,090 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceEmptyException: Não encontrado.]
+2023-04-18 20:38:31,019 WARN [http-nio-8080-exec-4] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceEmptyException: Não encontrado.]
+2023-04-18 20:38:52,743 WARN [http-nio-8080-exec-6] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceEmptyException: Não encontrado.]
+2023-04-18 20:40:07,144 WARN [http-nio-8080-exec-8] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Pet with id 1]
+2023-04-18 20:44:43,572 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:44:43,576 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 20:44:43,583 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.
+2023-04-18 20:45:09,176 INFO [background-preinit] org.hibernate.validator.internal.util.Version: HV000001: Hibernate Validator 8.0.0.Final
+2023-04-18 20:45:09,229 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Starting AdopetApplication using Java 17.0.6 with PID 10076 (C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api\target\classes started by hugof in C:\Users\hugof\OneDrive\Documentos\projetos\java\adopet-api)
+2023-04-18 20:45:09,229 DEBUG [restartedMain] org.springframework.boot.StartupInfoLogger: Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-04-18 20:45:09,231 INFO [restartedMain] org.springframework.boot.SpringApplication: No active profile set, falling back to 1 default profile: "default"
+2023-04-18 20:45:09,297 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-04-18 20:45:09,297 INFO [restartedMain] org.springframework.boot.logging.DeferredLog: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-04-18 20:45:10,400 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-18 20:45:10,491 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2023-04-18 20:45:11,281 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2023-04-18 20:45:11,295 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-18 20:45:11,296 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting service [Tomcat]
+2023-04-18 20:45:11,296 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-04-18 20:45:11,387 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Initializing Spring embedded WebApplicationContext
+2023-04-18 20:45:11,388 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2090 ms
+2023-04-18 20:45:11,607 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Flyway Community Edition 9.5.1 by Redgate
+2023-04-18 20:45:11,608 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.5.1
+2023-04-18 20:45:11,608 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: 
+2023-04-18 20:45:11,622 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Starting...
+2023-04-18 20:45:12,060 INFO [restartedMain] com.zaxxer.hikari.pool.HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c150364
+2023-04-18 20:45:12,063 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Start completed.
+2023-04-18 20:45:12,116 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Database: jdbc:mysql://localhost/adopet (MySQL 8.0)
+2023-04-18 20:45:12,185 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Successfully validated 3 migrations (execution time 00:00.037s)
+2023-04-18 20:45:12,205 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Current version of schema `adopet`: 0003
+2023-04-18 20:45:12,206 INFO [restartedMain] org.flywaydb.core.internal.logging.slf4j.Slf4jLog: Schema `adopet` is up to date. No migration necessary.
+2023-04-18 20:45:12,351 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-18 20:45:12,455 INFO [restartedMain] org.hibernate.Version: HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-18 20:45:12,946 INFO [restartedMain] org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl: HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-04-18 20:45:14,088 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-18 20:45:14,108 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:45:14,753 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-18 20:45:15,791 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer: LiveReload server is running on port 35729
+2023-04-18 20:45:15,818 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog: Starting ProtocolHandler ["http-nio-8080"]
+2023-04-18 20:45:15,852 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-18 20:45:15,865 INFO [restartedMain] org.springframework.boot.StartupInfoLogger: Started AdopetApplication in 7.153 seconds (process running for 8.451)
+2023-04-18 20:45:16,962 INFO [http-nio-8080-exec-1] org.apache.juli.logging.DirectJDKLog: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-18 20:45:16,963 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Initializing Servlet 'dispatcherServlet'
+2023-04-18 20:45:16,964 INFO [http-nio-8080-exec-1] org.springframework.web.servlet.FrameworkServlet: Completed initialization in 1 ms
+2023-04-18 20:45:17,127 WARN [http-nio-8080-exec-1] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [jakarta.persistence.EntityNotFoundException: Unable to find com.example.adopet.api.entities.Pet with id 1]
+2023-04-18 20:45:21,028 WARN [http-nio-8080-exec-3] org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver: Resolved [com.example.adopet.api.services.exceptions.ResourceEmptyException: Não encontrado.]
+2023-04-18 20:47:53,655 INFO [SpringApplicationShutdownHook] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-18 20:47:53,659 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown initiated...
+2023-04-18 20:47:53,666 INFO [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource: HikariPool-1 - Shutdown completed.

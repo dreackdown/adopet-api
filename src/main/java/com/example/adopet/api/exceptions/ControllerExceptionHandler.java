@@ -1,4 +1,4 @@
-package com.example.adopet.api.controller.exceptions;
+package com.example.adopet.api.exceptions;
 
 import com.example.adopet.api.services.exceptions.DatabaseException;
 import jakarta.persistence.EntityNotFoundException;
