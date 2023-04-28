@@ -1,6 +1,7 @@
 package com.example.adopet.api.controller;
 
 import com.example.adopet.api.dto.Tutor.*;
+import com.example.adopet.api.entities.Tutor;
 import io.swagger.v3.oas.annotations.Operation;
 import com.example.adopet.api.services.TutorService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -8,8 +9,10 @@ import jakarta.validation.Valid;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -25,7 +28,7 @@ public class TutoresController {
 
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Endpoint para criar um novo tutor")
-    public ResponseEntity save(@RequestBody @Valid DadosCadastroTutor dados, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<Object> save(@RequestBody @Valid DadosCadastroTutor dados, UriComponentsBuilder uriBuilder) {
         if (!dados.senha().equals(dados.confirmacaoSenha())) {
             return ResponseEntity.badRequest().body("Senha e confirmação senha não conferem!");
         }
