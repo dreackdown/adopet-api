@@ -1,0 +1,1 @@
+ALTER TABLE tbl_abrigos ADD FOREIGN KEY(id) REFERENCES tbl_usuarios(id);

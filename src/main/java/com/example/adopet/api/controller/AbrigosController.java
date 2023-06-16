@@ -1,14 +1,11 @@
 package com.example.adopet.api.controller;
 
-import com.example.adopet.api.dto.Abrigo.DadosAtualizacaoAbrigo;
-import com.example.adopet.api.dto.Abrigo.DadosCadastroAbrigo;
-import com.example.adopet.api.dto.Abrigo.DadosDetalhesAbrigo;
-import com.example.adopet.api.dto.Abrigo.DadosAbrigo;
-import com.example.adopet.api.services.AbrigoService;
+import com.example.adopet.api.domain.abrigo.AbrigoRequestDTO;
+import com.example.adopet.api.domain.abrigo.AbrigoResponseDTO;
+import com.example.adopet.api.domain.abrigo.AbrigoService;
+import com.example.adopet.api.domain.abrigo.AbrigoUpdateDTO;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -16,8 +13,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/abrigos")
-@Tag(name = "Abrigo")
+@RequestMapping("/api/abrigos")
 public class AbrigosController {
 
     private final AbrigoService abrigoService;
@@ -26,42 +22,36 @@ public class AbrigosController {
         this.abrigoService = abrigoService;
     }
 
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping
     @Operation(summary = "Endpoint para criar um novo abrigo")
-    public ResponseEntity<DadosDetalhesAbrigo> save(@RequestBody @Valid DadosCadastroAbrigo dados, UriComponentsBuilder uriBuilder) {
-        var abrigo = abrigoService.save(dados);
-        var uri = uriBuilder.path("/tutor/{id}").buildAndExpand(abrigo.getId()).toUri();
+    public ResponseEntity<?> save(@RequestBody @Valid AbrigoRequestDTO request, UriComponentsBuilder uriBuilder) {
 
-        return ResponseEntity.created(uri).body(new DadosDetalhesAbrigo(abrigo));
+        var abrigo = abrigoService.save(request);
+        var uri = uriBuilder.path("/api/abrigos/{id}").buildAndExpand(abrigo.getId()).toUri();
+        return ResponseEntity.created(uri).body(new AbrigoResponseDTO(abrigo));
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Endpoint para listar todos os abrigos")
-    public ResponseEntity<List<DadosDetalhesAbrigo>> findAll() {
-        List<DadosDetalhesAbrigo> abrigos = abrigoService.findAll();
-
-        return ResponseEntity.ok(abrigos);
-    }
-
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{id}")
     @Operation(summary = "Endpoint para listar abrigo por id")
-    public ResponseEntity findById(@PathVariable Long id) {
+    public ResponseEntity<AbrigoResponseDTO> findById(@PathVariable Long id) {
         return ResponseEntity.ok(abrigoService.findById(id));
     }
 
-
-    @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Endpoint para remover abrigo por id")
-    public ResponseEntity delete(@PathVariable Long id) {
-
-        abrigoService.deleteById(id);
-        return ResponseEntity.noContent().build();
+    @GetMapping()
+    @Operation(summary = "Endpoint para listar todos os abrigos")
+    public ResponseEntity<List<AbrigoResponseDTO>> findAll() {
+        return ResponseEntity.ok(abrigoService.findAll());
     }
 
-    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Endpoint para atualizar um abrigo")
-    public ResponseEntity update(@RequestBody @Valid DadosAtualizacaoAbrigo dados) {
-        var tutor = abrigoService.update(dados);
-        return ResponseEntity.ok().body(tutor);
+    @DeleteMapping(value = "/{id}")
+    @Operation(summary = "Endpoint para remover abrigo por id")
+    public ResponseEntity<String> delete(@PathVariable Long id) {
+        abrigoService.deleteById(id);
+        return ResponseEntity.ok("abrigo apagado com sucesso!");
+    }
+
+    @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
+    public ResponseEntity<?> update(@RequestBody @Valid AbrigoUpdateDTO request) {
+        return ResponseEntity.ok(abrigoService.update(request));
     }
 }

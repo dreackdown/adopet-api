@@ -1,23 +1,16 @@
 package com.example.adopet.api.controller;
 
-import com.example.adopet.api.dto.Tutor.*;
-import com.example.adopet.api.entities.Tutor;
+import com.example.adopet.api.domain.tutor.*;
 import io.swagger.v3.oas.annotations.Operation;
-import com.example.adopet.api.services.TutorService;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tutores")
-@Tag(name = "Tutor")
+@RequestMapping("/api/tutores")
 public class TutoresController {
 
     private final TutorService tutorService;
@@ -26,45 +19,43 @@ public class TutoresController {
         this.tutorService = tutorService;
     }
 
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping
     @Operation(summary = "Endpoint para criar um novo tutor")
-    public ResponseEntity<Object> save(@RequestBody @Valid DadosCadastroTutor dados, UriComponentsBuilder uriBuilder) {
-        if (!dados.senha().equals(dados.confirmacaoSenha())) {
+    public ResponseEntity<?> save(@RequestBody @Valid TutorRequestDTO request, UriComponentsBuilder uriBuilder) {
+        if (!request.senha().equals(request.confirmacaoSenha())) {
             return ResponseEntity.badRequest().body("Senha e confirmação senha não conferem!");
         }
 
-        var tutor = tutorService.save(dados);
-        var uri = uriBuilder.path("/tutor/{id}").buildAndExpand(tutor.getId()).toUri();
-
-        return ResponseEntity.created(uri).body(new DadosTutor(tutor));
+        var tutor = tutorService.save(request);
+        var uri = uriBuilder.path("/api/tutores/{id}").buildAndExpand(tutor.getId()).toUri();
+        return ResponseEntity.created(uri).body(new TutorResponseDTO(tutor));
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Endpoint para listar todos os tutores")
-    public ResponseEntity<List<DadosDetalhesTutor>> findAll() {
-        List<DadosDetalhesTutor> tutores = tutorService.findAll();
-
-        return ResponseEntity.ok(tutores);
-    }
-
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{id}")
     @Operation(summary = "Endpoint para listar tutor por id")
-    public ResponseEntity<DadosDetalhesTutor> findById(@PathVariable Long id) {
+    public ResponseEntity<TutorResponseDTO> findById(@PathVariable Long id) {
         return ResponseEntity.ok(tutorService.findById(id));
     }
 
-    @DeleteMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Endpoint para remover tutor por id")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-
-        tutorService.deleteById(id);
-        return ResponseEntity.noContent().build();
+    @GetMapping()
+    @Operation(summary = "Endpoint para listar todos os tutores")
+    public ResponseEntity<List<TutorResponseDTO>> findAll() {
+        return ResponseEntity.ok(tutorService.findAll());
     }
 
-    @PutMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @DeleteMapping(value = "/{id}")
+    @Operation(summary = "Endpoint para remover tutor por id")
+    public ResponseEntity<String> delete(@PathVariable Long id) {
+        tutorService.deleteById(id);
+        return ResponseEntity.ok("tutor apagado com sucesso!");
+    }
+
+    @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
     @Operation(summary = "Endpoint para atualizar um tutor")
-    public ResponseEntity<DadosTutor> update(@RequestBody @Valid DadosAtualizacaoTutor dados) {
-        var tutor = tutorService.update(dados);
-        return ResponseEntity.ok().body(tutor);
+    public ResponseEntity<?> update(@RequestBody @Valid TutorUpdateDTO request) {
+        if (request.senha() != null && (!request.senha().equals(request.confirmacaoSenha()))) {
+            return ResponseEntity.badRequest().body("Senha e confirmação senha não conferem!");
+        }
+        return ResponseEntity.ok(tutorService.update(request));
     }
 }
