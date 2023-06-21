@@ -13,7 +13,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/pets")
+@RequestMapping("/api/pets")
 public class PetsController {
 
     private final PetService petService;

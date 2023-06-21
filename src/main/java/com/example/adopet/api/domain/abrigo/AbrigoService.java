@@ -1,24 +1,41 @@
 package com.example.adopet.api.domain.abrigo;
 
+import com.example.adopet.api.domain.perfil.EPerfil;
+import com.example.adopet.api.domain.perfil.Perfil;
+import com.example.adopet.api.domain.perfil.PerfilRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
 public class AbrigoService {
 
     private final AbrigoRepository abrigoRepository;
+    private final PerfilRepository perfilRepository;
 
-    public AbrigoService(AbrigoRepository abrigoRepository) {
+    public AbrigoService(AbrigoRepository abrigoRepository,
+                         PerfilRepository perfilRepository) {
         this.abrigoRepository = abrigoRepository;
+        this.perfilRepository = perfilRepository;
     }
 
     @Transactional
     public Abrigo save(AbrigoRequestDTO request) {
         var abrigo = new Abrigo(request);
+
+        Set<Perfil> roles = new HashSet<>();
+
+        Perfil perfil = perfilRepository.findByNome(EPerfil.ROLE_ABRIGO)
+                .orElseThrow(() -> new RuntimeException("Erro: Perfil não encontrado."));
+
+        roles.add(perfil);
+
+        abrigo.setPerfis(roles);
         return abrigoRepository.save(abrigo);
     }
 
