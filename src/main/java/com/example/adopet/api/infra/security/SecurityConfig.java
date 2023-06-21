@@ -2,7 +2,7 @@ package com.example.adopet.api.infra.security;
 
 import com.example.adopet.api.domain.usuario.UsuarioService;
 import com.example.adopet.api.infra.security.jwt.AuthEntryPointJwt;
-import com.example.adopet.api.infra.security.jwt.AuthTokenFilter;
+import com.example.adopet.api.infra.security.jwt.SecurityFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -30,8 +30,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthTokenFilter authenticationJwtTokenFilter() {
-        return new AuthTokenFilter();
+    public SecurityFilter authenticationJwtTokenFilter() {
+        return new SecurityFilter();
     }
 
     @Bean
@@ -62,9 +62,11 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/api/abrigos/**").permitAll()
+                                .requestMatchers("/api/test/**").permitAll()
                                 .requestMatchers("/api/adocao/**").permitAll()
                                 .requestMatchers("/api/tutores/**").permitAll()
                                 .requestMatchers("/api/pets/**").permitAll()
+                                .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll()
                                 .anyRequest().authenticated()
                 );
 

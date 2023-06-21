@@ -1,6 +1,7 @@
 package com.example.adopet.api.domain.abrigo;
 
 import com.example.adopet.api.domain.usuario.Usuario;
+import com.example.adopet.api.infra.payload.request.AbrigoRequest;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
@@ -17,7 +18,7 @@ public class Abrigo extends Usuario {
     private String nome;
     private String telefone;
 
-    public Abrigo(AbrigoRequestDTO request) {
+    public Abrigo(AbrigoRequest request) {
         this.nome = request.nome();
         this.email = request.email();
         this.telefone = request.telefone();

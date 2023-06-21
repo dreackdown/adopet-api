@@ -2,6 +2,7 @@ package com.example.adopet.api.domain.adocao;
 
 import com.example.adopet.api.domain.pet.PetRepository;
 import com.example.adopet.api.domain.tutor.TutorRepository;
+import com.example.adopet.api.infra.payload.request.AdocaoRequest;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class AdocaoService {
     }
 
     @Transactional
-    public Adocao save(AdocaoRequestDTO request) {
+    public Adocao save(AdocaoRequest request) {
         var pet = petRepository.findById(request.petId()).orElseThrow(() -> new IllegalArgumentException("Pet não cadastrado!"));
         if (pet.getAdotado()) {
             throw new IllegalArgumentException("Pet já adotado!");

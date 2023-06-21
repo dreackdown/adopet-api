@@ -1,4 +1,4 @@
-package com.example.adopet.api.domain.usuario;
+package com.example.adopet.api.infra.payload.request;
 
 public record LoginRequest(String login, String senha) {
 }

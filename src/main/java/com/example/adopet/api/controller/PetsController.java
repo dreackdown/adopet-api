@@ -1,9 +1,9 @@
 package com.example.adopet.api.controller;
 
-import com.example.adopet.api.domain.pet.PetRequestDTO;
-import com.example.adopet.api.domain.pet.PetResponseDTO;
+import com.example.adopet.api.infra.payload.request.PetRequest;
+import com.example.adopet.api.infra.payload.response.PetResponse;
 import com.example.adopet.api.domain.pet.PetService;
-import com.example.adopet.api.domain.pet.PetUpdateDTO;
+import com.example.adopet.api.infra.payload.request.PetUpdateRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -24,22 +24,22 @@ public class PetsController {
 
     @PostMapping
     @Operation(summary = "Endpoint para criar um novo pet")
-    public ResponseEntity<?> save(@RequestBody @Valid PetRequestDTO request, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<?> save(@RequestBody @Valid PetRequest request, UriComponentsBuilder uriBuilder) {
 
         var pet = petService.save(request);
         var uri = uriBuilder.path("/api/pets/{id}").buildAndExpand(pet.getId()).toUri();
-        return ResponseEntity.created(uri).body(new PetResponseDTO(pet));
+        return ResponseEntity.created(uri).body(new PetResponse(pet));
     }
 
     @GetMapping(value = "/{id}")
     @Operation(summary = "Endpoint para listar pet por id")
-    public ResponseEntity<PetResponseDTO> findById(@PathVariable Long id) {
+    public ResponseEntity<PetResponse> findById(@PathVariable Long id) {
         return ResponseEntity.ok(petService.findById(id));
     }
 
     @GetMapping()
     @Operation(summary = "Endpoint para listar todos os pets")
-    public ResponseEntity<List<PetResponseDTO>> findAll() {
+    public ResponseEntity<List<PetResponse>> findAll() {
         return ResponseEntity.ok(petService.findAll());
     }
 
@@ -51,7 +51,7 @@ public class PetsController {
     }
 
     @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
-    public ResponseEntity<?> update(@RequestBody @Valid PetUpdateDTO request) {
+    public ResponseEntity<?> update(@RequestBody @Valid PetUpdateRequest request) {
         return ResponseEntity.ok(petService.update(request));
     }
 }

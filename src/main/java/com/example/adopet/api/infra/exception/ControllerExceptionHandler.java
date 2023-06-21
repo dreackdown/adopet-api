@@ -34,17 +34,17 @@ public class ControllerExceptionHandler {
     }
 
     @ExceptionHandler(BadCredentialsException.class)
-    public ResponseEntity badCredentials() {
+    public ResponseEntity<?> badCredentials() {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciais inválidas");
     }
 
     @ExceptionHandler(AuthenticationException.class)
-    public ResponseEntity authenticationException() {
+    public ResponseEntity<?> authenticationException() {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Falha na autenticação");
     }
 
     @ExceptionHandler(AccessDeniedException.class)
-    public ResponseEntity accessDenied() {
+    public ResponseEntity<?> accessDenied() {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Acesso negado");
     }
 
@@ -59,7 +59,7 @@ public class ControllerExceptionHandler {
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity tratarErroDeValidacao(IllegalArgumentException ex) {
+    public ResponseEntity<?> tratarErroDeValidacao(IllegalArgumentException ex) {
         return ResponseEntity.badRequest().body(new DadosErro400(LocalDateTime.now(), ex.getMessage()));
     }
 

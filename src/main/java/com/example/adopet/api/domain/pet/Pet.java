@@ -1,6 +1,7 @@
 package com.example.adopet.api.domain.pet;
 
 import com.example.adopet.api.domain.abrigo.Abrigo;
+import com.example.adopet.api.infra.payload.request.PetRequest;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +27,7 @@ public class Pet {
     @JoinColumn(name = "abrigo_id")
     private Abrigo abrigo;
 
-    public Pet(PetRequestDTO dados, Abrigo abrigo) {
+    public Pet(PetRequest dados, Abrigo abrigo) {
         this.nome = dados.nome();
         this.descricao = dados.descricao();
         this.adotado = dados.adotado();

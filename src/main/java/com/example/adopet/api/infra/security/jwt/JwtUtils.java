@@ -1,6 +1,7 @@
 package com.example.adopet.api.infra.security.jwt;
 
 import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
@@ -24,13 +25,12 @@ public class JwtUtils {
     @Value("${api.jwt.ExpirationMs}")
     private int jwtExpirationMs;
 
-    public String generateJwtToken(Authentication authentication) {
+    public String gerarToken(Authentication authentication) {
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
 
         return JWT.create()
                 .withSubject(userDetails.getUsername())
                 .withIssuedAt(new Date())
-                //expira em 24 horas
                 .withExpiresAt(new Date(System.currentTimeMillis() + jwtExpirationMs))
                 .sign(getAlgorithm());
     }
@@ -41,7 +41,7 @@ public class JwtUtils {
 
     public String getUsernameFromJwtToken(String token) {
         try {
-            DecodedJWT decodedJWT = JWT.require(getAlgorithm()).build().verify(token);
+            DecodedJWT decodedJWT = JWT.decode(token);
             return decodedJWT.getSubject();
         } catch (JWTDecodeException e) {
             logger.error("Invalid JWT token: {}", e.getMessage());
@@ -51,7 +51,9 @@ public class JwtUtils {
 
     public boolean validateJwtToken(String authToken) {
         try {
-            JWT.require(getAlgorithm()).build().verify(authToken);
+            Algorithm algorithm = getAlgorithm();
+            JWTVerifier verifier = JWT.require(algorithm).build();
+            verifier.verify(authToken);
             return true;
         } catch (Exception e) {
             logger.error("Invalid JWT token: {}", e.getMessage());

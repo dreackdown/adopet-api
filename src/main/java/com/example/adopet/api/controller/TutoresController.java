@@ -1,9 +1,13 @@
 package com.example.adopet.api.controller;
 
 import com.example.adopet.api.domain.tutor.*;
+import com.example.adopet.api.infra.payload.request.TutorRequest;
+import com.example.adopet.api.infra.payload.request.TutorUpdateRequest;
+import com.example.adopet.api.infra.payload.response.TutorResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -21,25 +25,26 @@ public class TutoresController {
 
     @PostMapping
     @Operation(summary = "Endpoint para criar um novo tutor")
-    public ResponseEntity<?> save(@RequestBody @Valid TutorRequestDTO request, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<?> save(@RequestBody @Valid TutorRequest request, UriComponentsBuilder uriBuilder) {
         if (!request.senha().equals(request.confirmacaoSenha())) {
             return ResponseEntity.badRequest().body("Senha e confirmação senha não conferem!");
         }
 
         var tutor = tutorService.save(request);
         var uri = uriBuilder.path("/api/tutores/{id}").buildAndExpand(tutor.getId()).toUri();
-        return ResponseEntity.created(uri).body(new TutorResponseDTO(tutor));
+        return ResponseEntity.created(uri).body(new TutorResponse(tutor));
     }
 
     @GetMapping(value = "/{id}")
     @Operation(summary = "Endpoint para listar tutor por id")
-    public ResponseEntity<TutorResponseDTO> findById(@PathVariable Long id) {
+    public ResponseEntity<TutorResponse> findById(@PathVariable Long id) {
         return ResponseEntity.ok(tutorService.findById(id));
     }
 
     @GetMapping()
+    @PreAuthorize("hasRole('TUTOR')")
     @Operation(summary = "Endpoint para listar todos os tutores")
-    public ResponseEntity<List<TutorResponseDTO>> findAll() {
+    public ResponseEntity<List<TutorResponse>> findAll() {
         return ResponseEntity.ok(tutorService.findAll());
     }
 
@@ -52,7 +57,7 @@ public class TutoresController {
 
     @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
     @Operation(summary = "Endpoint para atualizar um tutor")
-    public ResponseEntity<?> update(@RequestBody @Valid TutorUpdateDTO request) {
+    public ResponseEntity<?> update(@RequestBody @Valid TutorUpdateRequest request) {
         if (request.senha() != null && (!request.senha().equals(request.confirmacaoSenha()))) {
             return ResponseEntity.badRequest().body("Senha e confirmação senha não conferem!");
         }

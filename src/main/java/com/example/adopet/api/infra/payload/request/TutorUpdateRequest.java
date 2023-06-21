@@ -1,9 +1,9 @@
-package com.example.adopet.api.domain.tutor;
+package com.example.adopet.api.infra.payload.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 
-public record TutorUpdateDTO(
+public record TutorUpdateRequest(
         @NotNull
         Long id,
         String nome,

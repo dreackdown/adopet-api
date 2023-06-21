@@ -1,4 +1,4 @@
-package com.example.adopet.api.domain.usuario;
+package com.example.adopet.api.infra.payload.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

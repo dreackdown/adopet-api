@@ -17,9 +17,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-public class AuthTokenFilter extends OncePerRequestFilter {
-
-    private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
+public class SecurityFilter extends OncePerRequestFilter {
+    private static final Logger logger = LoggerFactory.getLogger(SecurityFilter.class);
+    private static final String BEARER_PREFIX = "Bearer ";
 
     @Autowired
     private JwtUtils jwtUtils;
@@ -31,7 +31,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         try {
-            String jwt = parseJwt(request);
+            String jwt = recuperarToken(request);
             if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
                 String username = jwtUtils.getUsernameFromJwtToken(jwt);
 
@@ -52,13 +52,12 @@ public class AuthTokenFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    private String parseJwt(HttpServletRequest request) {
-        String headerAuth = request.getHeader("Authorization");
+    private String recuperarToken(HttpServletRequest request) {
+        String authorizationHeader = request.getHeader("Authorization");
 
-        if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer ")) {
-            return headerAuth.substring(7);
+        if (StringUtils.hasText(authorizationHeader) && authorizationHeader.startsWith(BEARER_PREFIX)) {
+            return authorizationHeader.substring(BEARER_PREFIX.length());
         }
-
         return null;
     }
 }

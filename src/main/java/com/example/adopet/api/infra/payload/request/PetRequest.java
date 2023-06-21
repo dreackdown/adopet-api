@@ -1,9 +1,9 @@
-package com.example.adopet.api.domain.pet;
+package com.example.adopet.api.infra.payload.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-public record PetRequestDTO(
+public record PetRequest(
         @NotBlank String nome,
         @NotBlank String idade,
         @NotBlank String imagem,

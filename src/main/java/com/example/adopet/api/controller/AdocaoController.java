@@ -1,7 +1,7 @@
 package com.example.adopet.api.controller;
 
-import com.example.adopet.api.domain.adocao.AdocaoRequestDTO;
-import com.example.adopet.api.domain.adocao.AdocaoResponseDTO;
+import com.example.adopet.api.infra.payload.request.AdocaoRequest;
+import com.example.adopet.api.infra.payload.response.AdocaoResponse;
 import com.example.adopet.api.domain.adocao.AdocaoService;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
@@ -20,9 +20,9 @@ public class AdocaoController {
 
     @PostMapping
     @Operation(summary = "Endpoint para fazer uma adocao")
-    public ResponseEntity<?> save(@RequestBody @Valid AdocaoRequestDTO request) {
+    public ResponseEntity<?> save(@RequestBody @Valid AdocaoRequest request) {
         var adocao = adocaoService.save(request);
-        return ResponseEntity.ok(new AdocaoResponseDTO(adocao));
+        return ResponseEntity.ok(new AdocaoResponse(adocao));
     }
 
     @DeleteMapping("/{id}")

@@ -3,6 +3,9 @@ package com.example.adopet.api.domain.tutor;
 import com.example.adopet.api.domain.perfil.EPerfil;
 import com.example.adopet.api.domain.perfil.Perfil;
 import com.example.adopet.api.domain.perfil.PerfilRepository;
+import com.example.adopet.api.infra.payload.request.TutorRequest;
+import com.example.adopet.api.infra.payload.request.TutorUpdateRequest;
+import com.example.adopet.api.infra.payload.response.TutorResponse;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -28,7 +31,7 @@ public class TutorService {
     }
 
     @Transactional
-    public Tutor save(TutorRequestDTO request) {
+    public Tutor save(TutorRequest request) {
         var tutor = new Tutor(request, encoder.encode(request.senha()));
 
         Set<Perfil> roles = new HashSet<>();
@@ -41,23 +44,23 @@ public class TutorService {
         return tutorRepository.save(tutor);
     }
 
-    public TutorResponseDTO findById(Long id) {
+    public TutorResponse findById(Long id) {
         try {
             var tutor = tutorRepository.getReferenceById(id);
-            return new TutorResponseDTO(tutor);
+            return new TutorResponse(tutor);
         } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException();
         }
     }
 
-    public List<TutorResponseDTO> findAll() {
+    public List<TutorResponse> findAll() {
         var tutores = tutorRepository.findAll();
 
         if (tutores.isEmpty()) {
             throw new EntityNotFoundException();
         }
 
-        return tutores.stream().map(TutorResponseDTO::new).collect(Collectors.toList());
+        return tutores.stream().map(TutorResponse::new).collect(Collectors.toList());
     }
 
     public void deleteById(Long id) {
@@ -69,18 +72,18 @@ public class TutorService {
     }
 
     @Transactional
-    public TutorResponseDTO update(TutorUpdateDTO request) {
+    public TutorResponse update(TutorUpdateRequest request) {
         try {
             var tutor = tutorRepository.getReferenceById(request.id());
             updateData(tutor, request);
-            return new TutorResponseDTO(tutor);
+            return new TutorResponse(tutor);
 
         } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException();
         }
     }
 
-    private void updateData(Tutor entity, TutorUpdateDTO obj) {
+    private void updateData(Tutor entity, TutorUpdateRequest obj) {
         if (obj.nome() != null) {
             entity.setNome(obj.nome());
         }

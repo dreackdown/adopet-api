@@ -2,6 +2,7 @@ package com.example.adopet.api.domain.adocao;
 
 import com.example.adopet.api.domain.pet.Pet;
 import com.example.adopet.api.domain.tutor.Tutor;
+import com.example.adopet.api.infra.payload.request.AdocaoRequest;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -31,7 +32,7 @@ public class Adocao {
     @JoinColumn(name = "tutor_id")
     private Tutor tutor;
 
-    public Adocao(AdocaoRequestDTO request, Pet pet, Tutor tutor) {
+    public Adocao(AdocaoRequest request, Pet pet, Tutor tutor) {
         this.data = request.data();
         this.pet = pet;
         this.tutor = tutor;

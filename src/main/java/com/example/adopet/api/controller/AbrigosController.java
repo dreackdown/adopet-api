@@ -1,9 +1,9 @@
 package com.example.adopet.api.controller;
 
-import com.example.adopet.api.domain.abrigo.AbrigoRequestDTO;
-import com.example.adopet.api.domain.abrigo.AbrigoResponseDTO;
+import com.example.adopet.api.infra.payload.request.AbrigoRequest;
+import com.example.adopet.api.infra.payload.response.AbrigoResponse;
 import com.example.adopet.api.domain.abrigo.AbrigoService;
-import com.example.adopet.api.domain.abrigo.AbrigoUpdateDTO;
+import com.example.adopet.api.infra.payload.request.AbrigoUpdateRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -24,22 +24,22 @@ public class AbrigosController {
 
     @PostMapping
     @Operation(summary = "Endpoint para criar um novo abrigo")
-    public ResponseEntity<?> save(@RequestBody @Valid AbrigoRequestDTO request, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<?> save(@RequestBody @Valid AbrigoRequest request, UriComponentsBuilder uriBuilder) {
 
         var abrigo = abrigoService.save(request);
         var uri = uriBuilder.path("/api/abrigos/{id}").buildAndExpand(abrigo.getId()).toUri();
-        return ResponseEntity.created(uri).body(new AbrigoResponseDTO(abrigo));
+        return ResponseEntity.created(uri).body(new AbrigoResponse(abrigo));
     }
 
     @GetMapping(value = "/{id}")
     @Operation(summary = "Endpoint para listar abrigo por id")
-    public ResponseEntity<AbrigoResponseDTO> findById(@PathVariable Long id) {
+    public ResponseEntity<AbrigoResponse> findById(@PathVariable Long id) {
         return ResponseEntity.ok(abrigoService.findById(id));
     }
 
     @GetMapping()
     @Operation(summary = "Endpoint para listar todos os abrigos")
-    public ResponseEntity<List<AbrigoResponseDTO>> findAll() {
+    public ResponseEntity<List<AbrigoResponse>> findAll() {
         return ResponseEntity.ok(abrigoService.findAll());
     }
 
@@ -51,7 +51,7 @@ public class AbrigosController {
     }
 
     @RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH})
-    public ResponseEntity<?> update(@RequestBody @Valid AbrigoUpdateDTO request) {
+    public ResponseEntity<?> update(@RequestBody @Valid AbrigoUpdateRequest request) {
         return ResponseEntity.ok(abrigoService.update(request));
     }
 }

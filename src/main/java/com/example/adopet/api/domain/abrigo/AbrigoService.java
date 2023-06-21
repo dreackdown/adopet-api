@@ -3,6 +3,9 @@ package com.example.adopet.api.domain.abrigo;
 import com.example.adopet.api.domain.perfil.EPerfil;
 import com.example.adopet.api.domain.perfil.Perfil;
 import com.example.adopet.api.domain.perfil.PerfilRepository;
+import com.example.adopet.api.infra.payload.request.AbrigoRequest;
+import com.example.adopet.api.infra.payload.request.AbrigoUpdateRequest;
+import com.example.adopet.api.infra.payload.response.AbrigoResponse;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -25,37 +28,36 @@ public class AbrigoService {
     }
 
     @Transactional
-    public Abrigo save(AbrigoRequestDTO request) {
+    public Abrigo save(AbrigoRequest request) {
         var abrigo = new Abrigo(request);
 
         Set<Perfil> roles = new HashSet<>();
 
-        Perfil perfil = perfilRepository.findByNome(EPerfil.ROLE_ABRIGO)
+        Perfil perfilAbrigo = perfilRepository.findByNome(EPerfil.ROLE_ABRIGO)
                 .orElseThrow(() -> new RuntimeException("Erro: Perfil não encontrado."));
 
-        roles.add(perfil);
-
+        roles.add(perfilAbrigo);
         abrigo.setPerfis(roles);
         return abrigoRepository.save(abrigo);
     }
 
-    public AbrigoResponseDTO findById(Long id) {
+    public AbrigoResponse findById(Long id) {
         try {
             var abrigo = abrigoRepository.getReferenceById(id);
-            return new AbrigoResponseDTO(abrigo);
+            return new AbrigoResponse(abrigo);
         } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException();
         }
     }
 
-    public List<AbrigoResponseDTO> findAll() {
+    public List<AbrigoResponse> findAll() {
         var abrigos = abrigoRepository.findAll();
 
         if (abrigos.isEmpty()) {
             throw new EntityNotFoundException();
         }
 
-        return abrigos.stream().map(AbrigoResponseDTO::new).collect(Collectors.toList());
+        return abrigos.stream().map(AbrigoResponse::new).collect(Collectors.toList());
     }
 
     public void deleteById(Long id) {
@@ -67,18 +69,18 @@ public class AbrigoService {
     }
 
     @Transactional
-    public AbrigoResponseDTO update(AbrigoUpdateDTO request) {
+    public AbrigoResponse update(AbrigoUpdateRequest request) {
         try {
             var abrigo = abrigoRepository.getReferenceById(request.id());
             updateData(abrigo, request);
-            return new AbrigoResponseDTO(abrigo);
+            return new AbrigoResponse(abrigo);
 
         } catch (EntityNotFoundException e) {
             throw new EntityNotFoundException();
         }
     }
 
-    private void updateData(Abrigo entity, AbrigoUpdateDTO obj) {
+    private void updateData(Abrigo entity, AbrigoUpdateRequest obj) {
         if (obj.nome() != null) {
             entity.setNome(obj.nome());
         }

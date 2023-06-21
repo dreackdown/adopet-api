@@ -1,12 +1,14 @@
-package com.example.adopet.api.domain.tutor;
+package com.example.adopet.api.infra.payload.request;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public record TutorRequestDTO(
+public record AbrigoRequest(
         @NotBlank String nome,
+
         @NotBlank String login,
-        @NotBlank @Email String email,
+
         @NotBlank String senha,
-        @NotBlank String confirmacaoSenha) {
+        @NotBlank @Email String email,
+        @NotBlank String telefone) {
 }
