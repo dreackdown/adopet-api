@@ -1,1 +1,0 @@
-ALTER TABLE tbl_tutores DROP COLUMN senha;

@@ -1,1 +1,0 @@
-ALTER TABLE tbl_abrigos DROP COLUMN email;
